@@ -1,0 +1,8 @@
+<%= form_for @post do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_field :description %>
+  <br>
+  <%= f.submit locals[:b_text]%>
+<% end %>
+
+<%= link_to  "Home", root_path %>

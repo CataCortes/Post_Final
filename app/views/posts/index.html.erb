@@ -1,0 +1,19 @@
+<h1> Listado de Post </h1>
+<p><%= link_to "Crear Post", new_post_path %></p>
+<table>
+  <tr>
+      <th> Id </th>
+      <th> Creado Por </th>
+      <th> Title </th>
+      <th> Acciones </th>
+  </tr>
+    <% @post.each do |post|%>
+      <tr>
+        <td><%= post.id%> </td>
+        <td><%= post.user.email if post.user%> </td>
+        <td><%= post.title%> </td>
+        <td><%= link_to "Ver" ,post%> </td>
+        <td><%= link_to "Editar" ,post%> </td>
+              </tr>
+    <% end %>
+</table>
